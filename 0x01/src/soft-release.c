@@ -1,24 +1,30 @@
 #include <stdio.h>
 #include <unistd.h>
+
 #ifdef linux
 #include <pthread.h>
 #endif
+
+#ifdef _WIN32
 #include <windows.h>
+#endif
+
 #include <stdbool.h>
 #include <string.h>
+
 #define _USE_odisjf029jd09igj2g_ false
 
-char chave(const char *string) {
+char sdopijfjd098dj(const char *sdopijfjd198dj) {
     return 0x24;
 }
 
-char *sdopigfj2098dj(char *string){
+char *sdopigfj2098dj(char *sdopijfjd198dj){
 
-    char key = chave(string);
-    for(unsigned int i = 0; i < strlen(string); i++) {
-        string[i] ^= 0xc;
+    char sdopzjf42d198dj = sdopijfjd098dj(sdopijfjd198dj);
+    for(unsigned int sdopzjfvd198dj = 0; sdopzjfvd198dj < strlen(sdopijfjd198dj); sdopzjfvd198dj++) {
+        sdopijfjd198dj[sdopzjfvd198dj] ^= 0xc;
     }
-    return string;
+    return sdopijfjd198dj;
 }
 
 void IJoijOJ09UJ0UJ9yh978Y87yt8yGHO87YGO8(const char *uhsj9wf87dyuh9872yh, const char *i2jd089gjd2igj029ijdg, bool q, short int t, short int r, bool is_e) {
