@@ -82,7 +82,7 @@ void processArgument(int argc, char **args) {
     }
 
     /* Final comparison of password */
-    if((x.getCode() ^ 0x9C) == (0x9C ^ (0x84 + 0x18)) {
+    if((x.getCode() ^ 0x9C) == (0x9C ^ (0x84 + 0x18))) {
         win();
     } else {
         defeat();
