@@ -104,7 +104,7 @@ bool checkPassword(std::string entrada) {
      */
 
     const char *input = entrada.c_str();        /* User input converted to C string */
-    unsigned long int HardSum = 0x224;          /* Sum of Password 'porra' */
+    const unsigned long int HardSum = 0x224;    /* Sum of Password 'porra' (do NOT modify [will change the comparison logic statement]) */
     unsigned long int Sum = 0;                  /* Sum of user input */
     int c = 0;
     
@@ -115,7 +115,9 @@ bool checkPassword(std::string entrada) {
     }
  
     /* Sum comparison */
-    if(Sum == HardSum) {
+    /* For humans: Sum == 0x224 and length of input == 5 and 0x70 ('p') == input[0] */
+
+    if(Sum == HardSum && c == 5 && ((HardSum + 0x30) ^ HardSum) == input[0]) {
         return true;
     } else {
         return false;
