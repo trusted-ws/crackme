@@ -45,7 +45,7 @@ int main(void) {
     fgets(buffer, sizeof(buffer), stdin);
 
     printf("%s", decrypt(str3, sizeof(str3)));
-    scanf("%d", &intBuff);
+    scanf_s("%d", &intBuff);
 
     for(int i = 0; i < 9; i++) {
         char o = p[i] ^ intBuff;
