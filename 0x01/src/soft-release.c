@@ -1,8 +1,14 @@
+/*
+ * Manually obfuscated
+ * (THIS CODE IS DISCONTINUED)
+ */
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 #ifdef linux
 #include <pthread.h>
+#include <sys/stat.h>
 #endif
 
 #ifdef _WIN32
@@ -21,7 +27,7 @@ char sdopijfjd098dj(const char *sdopijfjd198dj) {
 char *sdopigfj2098dj(char *sdopijfjd198dj){
 
     char sdopzjf42d198dj = sdopijfjd098dj(sdopijfjd198dj);
-    for(unsigned int sdopzjfvd198dj = 0; sdopzjfvd198dj < strlen(sdopijfjd198dj); sdopzjfvd198dj++) {
+    for (unsigned int sdopzjfvd198dj = 0; sdopzjfvd198dj < strlen(sdopijfjd198dj); sdopzjfvd198dj++) {
         sdopijfjd198dj[sdopzjfvd198dj] ^= 0xc;
     }
     return sdopijfjd198dj;
@@ -55,6 +61,7 @@ void IJoijOJ09UJ0UJ9yh978Y87yt8yGHO87YGO8(const char *uhsj9wf87dyuh9872yh, const
     }
 }
 
+#if _WIN32
 bool sdpofjk02d09(void) {
     sleep(1);
 	char iudfoisudfosd[32] = "mbog\"<}";
@@ -66,6 +73,21 @@ DWORD WINAPI oiudjfos8jg928d_t(const char *sdkjlkdjgdoijs, const char *asd2iduhg
     fprintf(stdout, "[%s] %s\n", sdkjlkdjgdoijs, asd2iduhgjlkd);
     sleep(1);
 }
+#endif
+
+#if linux
+int sdpofjk02d09(void) {
+    sleep(1);
+    char iudfoisudfosd[32] = "mbog\"<}";
+    struct stat st;
+    
+    if (stat(iudfoisudfosd, &st) == 0) {
+        return !S_ISDIR(st.st_mode);
+    } else {
+        return 0;
+    }
+}
+#endif
 
 bool oiudjfos8jg928d(const char *oidgjwokdgowjddlk, const char *oij9fd3uijokjsd) {
     fprintf(stdout, "[%s] %s\n", oidgjwokdgowjddlk, oij9fd3uijokjsd);
@@ -73,12 +95,13 @@ bool oiudjfos8jg928d(const char *oidgjwokdgowjddlk, const char *oij9fd3uijokjsd)
 }
 int main(int oidjgoijsdg, char **o2idjgdjgpsdig2) {
 
+#if _WIN32
     if(_USE_odisjf029jd09igj2g_) {
         HANDLE odisjf029jd09igj2g;
         odisjf029jd09igj2g = CreateThread(NULL, 0, oiudjfos8jg928d_t(o2idjgdjgpsdig2[0], "sdpofjk02d09ing..."), NULL, 0, NULL);
         if(odisjf029jd09igj2g) { sleep(2); }
     }
-
+#endif
 	char sdkasyhgd6ssd[32] = "Odiogebk\"\"\""; 
     oiudjfos8jg928d(o2idjgdjgpsdig2[0], sdopigfj2098dj(sdkasyhgd6ssd));
     if(!sdpofjk02d09()) {

@@ -5,7 +5,6 @@
 
 /* Logic: String is decrypted with decremented XOR operation.
  * ------------------------------------------------------------
- * Password: chewbacca
  *
  * To win: ./program -p <password>
  * 
@@ -90,14 +89,13 @@ void processArgument(int argc, char **args) {
 }
 
 
-signed main(int argc, char *argv[], char *envp[]) {
+signed main(int argc, char *argv[], [[maybe_unused]] char *envp[]) {
 
     if(argc < 2) {
-        fatal(1, "Please give me an argument!");
+        fatal(1, "usage: ./program -p <password>");
     } else {
         processArgument(argc, argv);
     }
 
     return 0;
 }
-
